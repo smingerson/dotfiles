@@ -1,0 +1,52 @@
+### BASICS
+F1 - Focus Source
+SHIFT+F1 - GO to definition
+F2 - Focus Console
+SHIFT+F2 - Focus console output
+F3 - Focus help
+SHIFT+F4 - Go to function help
+CTRL+SHIFT+F3 - Help Search
+ALT+SHIFT+F3 - help back
+ALT+SHIFT+F4 - help forward
+F4 - Focus Files
+SHIFT+F4 - Go to source file location in files pane
+CTRL+ALT+SHIFT+F4 - Focus find in files
+
+### STYLE
+F6 - style active file
+SHIFT+F6 - style package
+CTRL+SHIFT+F6 -  style selection
+F7 - check spelling
+
+### ANALYSIS WORKFLOW
+F11 Create function definition on clipboard
+F17 - Load Drake Project
+F18 - Run drake::r_make()
+SHIFT+F18 - Visualize workflow
+F19 - Loadd at cursor
+SHIFT+F19 - Loadd targets for function
+F21 - restart R session
+SHIFT+F21 - restart RStudio
+
+### SOURCE BROWSING
+Shift/ctrl instead for hard
+DEL+Alt - Delete from cursor to EOL
+BKSPC+Alt - Delete from SOL to cursor
+CTRL+DEL/BKSPC - Remove right/left word
+L+Alt - Fold
+L+Alt+Shift - Unfold
+G+Alt+Shift - go to line
+J+Alt+Shift - browse sections
+Split into Lines
+CTRL ALT A
+Split line CTRL J
+
+##### Find
+Ctrl+F - Find
+Ctrl+K - Find Next
+Ctrl+Shift+K - Find Previous
+
+### PACKAGES
+SHIFT+F14 - Open roxygen quick reference
+CTRL+ALT+SHIFT+R - insert roxygen skeleton
+
