@@ -1,0 +1,62 @@
+{
+    "highlight_selected_line": true,
+    "panes": {
+        "quadrants": [
+            "Source",
+            "Console",
+            "TabSet1",
+            "TabSet2"
+        ],
+        "tabSet1": [
+            "Environment",
+            "History",
+            "Connections",
+            "Build",
+            "VCS",
+            "Tutorial",
+            "Presentation"
+        ],
+        "tabSet2": [
+            "Files",
+            "Plots",
+            "Packages",
+            "Help",
+            "Viewer"
+        ],
+        "console_left_on_top": false,
+        "console_right_on_top": true
+    },
+    "auto_append_newline": true,
+    "strip_trailing_whitespace": true,
+    "soft_wrap_r_files": true,
+    "syntax_color_console": true,
+    "save_files_before_build": true,
+    "font_size_points": 9,
+    "editor_theme": "Oceanic Plus {rsthemes}",
+    "default_project_location": "S:/Projects",
+    "packages_pane_enabled": false,
+    "document_author": "Sean Ingerson",
+    "show_publish_diagnostics": true,
+    "show_doc_outline_rmd": true,
+    "show_hidden_files": true,
+    "global_theme": "alternate",
+    "console_double_click_select": true,
+    "save_workspace": "never",
+    "remove_history_duplicates": true,
+    "reuse_sessions_for_project_links": true,
+    "load_workspace": false,
+    "auto_save_idle_ms": 10000,
+    "windows_terminal_shell": "win-git-bash",
+    "shiny_viewer_type": "browser",
+    "jobs_tab_visibility": "shown",
+    "toolbar_visible": false,
+    "rmd_chunk_output_inline": false,
+    "hide_console_on_chunk_execute": false,
+    "margin_column": 100,
+    "default_encoding": "UTF-8",
+    "doc_outline_show": "sections_and_chunks",
+    "code_completion_delay": 500,
+    "new_proj_git_init": true,
+    "git_diff_ignore_whitespace": true,
+    "source_with_echo": true
+}

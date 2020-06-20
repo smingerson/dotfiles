@@ -1,0 +1,19 @@
+{
+    "setWorkingDirToProjectDir": "",
+    "terminateR": "",
+    "restartR": "F21",
+    "copyPlotToClipboard": "",
+    "focusConsoleOutputEnd": "Shift+F2",
+    "helpSearch": "Ctrl+Shift+F3",
+    "activateConsole": "F2",
+    "activateSource": "F1",
+    "openRoxygenQuickReference": "Shift+F14",
+    "toggleFullScreen": "F9",
+    "goToHelp": "Shift+F3",
+    "goToDefinition": "Shift+F1",
+    "restartRRunAllChunks": "",
+    "activateHelp": "F3",
+    "activateFiles": "F4",
+    "activateFindInFiles": "Ctrl+Alt+Shift+F",
+    "goToPrevSection": "Ctrl+PageUp"
+}

@@ -1,0 +1,13 @@
+{
+    "drake::rs_addin_r_make": "F18",
+    "drake::rs_addin_loadd": "F19",
+    "fnmate::rs_fnmate_clip": "F11",
+    "styler::style_active_file": "F6",
+    "styler::style_active_pkg": "Shift+F6",
+    "styler::style_selection": "Ctrl+Shift+F6",
+    "shrtcts::shortcut_02": "F17",
+    "shrtcts::shortcut_03": "Shift+F19",
+    "shrtcts::shortcut_05": "Shift+F4",
+    "shrtcts::shortcut_01": "Shift+F21",
+    "drake::rs_addin_r_vis_drake_graph": "Shift+F18"
+}

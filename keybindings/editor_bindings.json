@@ -1,0 +1,7 @@
+{
+    "removetolineendhard": "Ctrl+Shift+Delete",
+    "toggleFoldWidget": "",
+    "unfold": "Alt+Shift+L|Alt+Shift+L|",
+    "toggleParentFoldWidget": "Ctrl+Alt+Shift+L",
+    "fold": "Alt+L|Alt+L|"
+}
