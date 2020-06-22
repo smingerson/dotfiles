@@ -1,0 +1,80 @@
+- Name: Restart RStudio
+  id: 1
+  Binding: usethis:::restart_rstudio
+  Interactive: true
+
+- Name: Drake - Load Project
+  Description: Source "_drake.R"
+  id: 2
+  Interactive: true
+  Binding: |
+    drake_src <- here::here("_drake.R")
+    if (file.exists(drake_src)) {
+      function() {
+        rstudioapi::sendToConsole(paste0('source("', drake_src, '")'))
+        rstudioapi::executeCommand("activateConsole")
+      }
+    } else {
+      message("_drake.R file not found: ", drake_src)
+    }
+    
+- Name: Drake - Loadd Targets for Function
+  Description: Load the targets used by the selected function
+  Interactive: false
+  id: 3
+  Binding: |
+    ctx <- rstudioapi::getSourceEditorContext()
+    if (!nzchar(ctx$selection[[1]]$text)) {
+      message("Nothing selected")
+      return(invisible())
+    }
+    if (!exists("plan", envir = globalenv())) {
+      stop("Please load a drake plan first.", call. = FALSE)
+    }
+    plan <- get("plan", globalenv())
+    args <- names(formals(ctx$selection[[1]]$text))
+    cache <- getOption("rstudio_drake_cache") %||% drake::drake_cache()
+    cache <- drake:::decorate_storr(cache)
+    targets <- intersect(args, plan$target)
+    cat("loading targets:", paste(targets, collapse = ", "))
+    drake::loadd(list = targets, envir = globalenv(), cache = cache)
+- Name: New Temporary R Markdown Document
+  id: 4
+  Binding: |
+    tmp <- tempfile(fileext = ".Rmd")
+    rmarkdown::draft(
+      tmp,
+      template = "github_document",
+      package = "rmarkdown",
+      edit = FALSE
+    )
+    rstudioapi::navigateToFile(tmp)
+  Interactive: false
+
+- name: Go to Source File Location
+  Description: Navigate to current source file in Files pane
+  id: 5
+  Interactive: false
+  Binding: |
+    .browse_source_dir <- function(path = NULL) {
+      if (!rstudioapi::hasFun("executeCommand")) return(invisible())
+      if (is.null(path)) {
+        path <- rstudioapi::getSourceEditorContext()$path
+      }
+      if (path == "") {
+        message("Current source file hasn't been saved yet")
+        return(invisible())
+      }
+      if (fs::is_file(path)) {
+        path <- fs::path_dir(path)
+      }
+      if (!fs::dir_exists(path)) {
+        message("Directory does not exist: ", path)
+        return(invisible())
+      }
+      owd <- setwd(path)
+      later::later(function() {
+        rstudioapi::executeCommand("goToWorkingDir")
+        setwd(owd)
+      })
+    }
